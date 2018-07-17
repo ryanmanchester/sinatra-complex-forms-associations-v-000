@@ -41,11 +41,11 @@ class PetsController < ApplicationController
     binding.pry
     @pet.update(params["pet"])
     #binding.pry
-    
+
 
     if !params["owner"]["name"].empty?
       #binding.pry
-      @pet.owner = Owner.create(name: params["owner_name"])
+      @pet.owner = Owner.create(name: params["owner"]["name"])
     end
     #binding.pry
 
